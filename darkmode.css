@@ -1,0 +1,19 @@
+body.oscuro {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+body.oscuro header,
+body.oscuro footer {
+  background-color: #1f2937;
+}
+body.oscuro .proyecto,
+body.oscuro .timeline-content {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+body.oscuro input,
+body.oscuro textarea {
+  background-color: #374151;
+  color: #fff;
+  border: 1px solid #4b5563;
+}

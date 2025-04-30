@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Javier Tobar</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="darkmode.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="fade-in">
+    <div class="container">
+      <h1>Javier Cristóbal Tobar Cortés</h1>
+      <p>Estudiante de Ingeniería en Informática | Analista Programador</p>
+      <a href="CV_Javier_Tobar.pdf" download class="boton-descarga">Descargar CV</a>
+      <button id="modoOscuroBtn" class="boton-modo">Modo Oscuro</button>
+      <nav>
+        <ul>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="sobre-mi" class="container fade-in">
+    <h2>Sobre mí</h2>
+    <div class="foto-perfil">
+      <img src="perfil.jpg" alt="Foto de Javier Tobar">
+    </div>
+    <p>Estudiante de Ingeniería en Informática en la Universidad Tecnológica de Chile Inacap. Con experiencia en desarrollo de aplicaciones informáticas, soporte a sistemas y creación de soluciones tecnológicas. Destaco por mi compromiso, trabajo en equipo y capacidad de adaptación.</p>
+  </section>
+
+  <section id="proyectos" class="container fade-in">
+    <h2>Proyectos</h2>
+    <div class="proyectos-grid">
+      <div class="proyecto">
+        <h3>Sistema de Inventario</h3>
+        <p>Aplicación web para gestión de inventario con funcionalidades CRUD, desarrollada durante la práctica profesional.</p>
+      </div>
+      <div class="proyecto">
+        <h3>Portal Web Informativo</h3>
+        <p>Sitio web responsive desarrollado para difundir información institucional, con diseño limpio y profesional.</p>
+      </div>
+      <div class="proyecto">
+        <h3>Aplicación de Escritorio para Ventas</h3>
+        <p>Aplicación construida en entorno local para gestionar ventas, registrar clientes y emitir reportes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia" class="container fade-in">
+    <h2>Experiencia & Estudios</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>ITC Ingeniería SPA (2022–2023)</h3>
+          <p>Técnico de Proyecto, área NOVATECH</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Analista Programador - Inacap</h3>
+          <p>Título Técnico de Nivel Superior (2023)</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Ingeniería en Informática</h3>
+          <p>En curso - Universidad Tecnológica de Chile Inacap</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades" class="container fade-in">
+    <h2>Habilidades</h2>
+    <ul class="habilidades-lista">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>SQL</li>
+      <li>Scrum</li>
+      <li>Git</li>
+    </ul>
+  </section>
+
+  <section id="contacto" class="container fade-in">
+    <h2>Contacto</h2>
+    <form action="https://formspree.io/f/tu_codigo_formspree" method="POST" class="formulario-contacto">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer class="fade-in">
+    <p>&copy; 2025 Javier Tobar. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('modoOscuroBtn');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('oscuro');
+    });
+
+    const elements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
